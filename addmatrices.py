@@ -58,6 +58,12 @@ def subtract_matrices_in_list(matrices, force_rows, force_cols):
                     endmatrix[i][j] -= matrix[i][j]
     return endmatrix
 
+def multiply_2_matrices(matrix1, matrix2, new):
+    # check if matrices can be multiplied
+    assert len(matrix1) == len(matrix2[0]), "matrices cannot be multiplied"
+    # begin iteration
+    
+                       
 
 matrix1 = []
 matrix2 = []
@@ -65,9 +71,21 @@ matrixlist = [matrix1, matrix2]
 rows = 2
 cols = 2
 populate_matrices_in_list(matrixlist, rows, cols)
+
+# addition & subtraction block
+
+'''
 added = add_matrices_in_list(matrixlist, rows, cols)
 subtracted = subtract_matrices_in_list(matrixlist, rows, cols)
 print(" added ")
 print_matrix(added)
 print(" subtracted ")
 print_matrix(subtracted)
+'''
+
+# multiplication block
+
+
+multiplied = []
+
+d

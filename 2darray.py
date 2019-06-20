@@ -4,6 +4,7 @@ MATRIX OPERATIONS
 2) Print matrix
 3) Print diagonal of matrix
 4) Print Upper and Lower halves of matrix
+5) Transpose of Matrix
 
 '''
 import pprint
@@ -52,6 +53,17 @@ def half(matrix, param):
                 else: row.append(' ')
         print(row)
 
+def transpose_matrix(matrix):
+    new = []
+    rows = len(matrix)
+    cols = len(matrix[0])
+    for i in range(0, cols):
+        new_row = []
+        for j in range(0, rows):
+            new_row.append(matrix[j][i])
+        new.append(new_row)
+    return new
+            
 
 
 matrix = []
@@ -62,3 +74,6 @@ populate_matrix(rows, cols, matrix)
 print_matrix(matrix)
 half(matrix, 'lower')
 half(matrix, 'upper')
+transpose = transpose_matrix(matrix)
+print("transposed >>>")
+print_matrix(transpose)

@@ -12,22 +12,9 @@ class board:
     def get_board(self):
         return self.board
 
-    def print_board(self):
-        for row in self.board:
-            print(row)
-
-class team:
-    
-
-
-class player:
-
-    def __init__(self, playername, team):
-        self.playername = playername
-        self.points = 0
-        self.team = team
+    def print_board
 
 
 b = board(5)
-b.print_board()
+print(b.get_board())
         
