@@ -49,7 +49,7 @@ def dequeue(queue):
 
 while True:
     print(" queue ops >> ")
-    c= int(input("enter some options "))
+    c= int(input("enter some options 1,2,3 "))
     if c == 1:
         show(queue)
     elif c == 2:

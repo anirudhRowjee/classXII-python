@@ -13,22 +13,51 @@ It's easy and simple to use for regular people.
     a) Library Members
     b) Library Administrators
 3) Issues (whole component will handle issuing books, returning books, etc)
+4) Authors
+
+-> PACKAGES USED
+1) Django 2.1
+2) Mysql Client
+3) Bootstrap 4.3.1
 
 -> SAILENT FEATURES
-1) Add books by ISBN (or by list of ISBNs in CSV file)
-2) Member history
-3) Fee Collection and record ( late fees applicable as well )
-4) Good User Interface
+1) Member history
+2) Fee Collection and record ( late fees applicable as well )
+3) Good User Interface
 
 => Core Principle of Django ( MVT )
 
--> TIMELINE
 
-1) 28/5/19 - Planning Begins
-2) 31/5/19 - Planning Ends
-3) 11/6/19 - Start coding
-    a) till 18/6/19 - Frontend & design
-    b) till 25/6/19 - Backend
-    c) till 1/7/19 - Integration
-    d) Till 8/7/19 - Documentation
-4) 15/7/19 - Completion of Project Report
+===> MODELS
+
+1) Authors
+    -> ID (pkey)
+    -> Name
+
+2) Books
+    -> ID (pkey)
+    -> Name
+    -> Author (fkey Authors)
+    -> ISBN-10
+    -> ISBN-13
+    -> CostPrice 
+    -> RentalPrice
+    -> Qty-Available
+
+3) Users
+    -> ID (pkey)
+    -> Name
+    -> Books_issued
+    -> unique_id
+
+4) Issues
+    -> ID (pkey)
+    -> Date_Issued (DDMMYYYY HHMMSS 24h)
+    -> Date_Returned (DDMMYYYY HHMMSS 24h)
+    -> User_issued (fkey Users)
+    -> Book_Issued (fkey Books)
+    -> returned (y/n)
+
+
+
+

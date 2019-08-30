@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <form method='POST'>
+        EmpID : <input type='text' name='empid'>
+        <br>
+        EmpName : <input type='text' name'empname'>
+        <br>
+        <button action='submit'> Submit </button>
+        <button> <a href='https://www.google.com'> come to googlr </a> </button> 
+    </form>
+</html>
+
+<pre>
+    import csv
+
+    def register(request):
+        if request.method == 'POST':
+            dic = {}
+            empname = request.POST['empname']
+            empid = request.POST['empid']
+            dic['empname'] = empname
+            dic['empid'] = empid
+            fieldnames = ('empid', 'empname')
+            with open('data.csv', 'a') as f:
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+                writer.writerow(dic)
+            return render(request, home.html)
+                
+</pre>
